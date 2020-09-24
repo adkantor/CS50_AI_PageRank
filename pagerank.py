@@ -138,11 +138,10 @@ def iterate_pagerank(corpus, damping_factor):
         # update PageRanks
         for page in pages:            
             new_rank[page] = get_page_rank(page, amended_corpus, current_rank, damping_factor)
+        rank = new_rank
         # check threshold, break if all values are below
         if change_below_threshold(current_rank.values(), new_rank.values(), 0.001):
             break
-
-        rank = new_rank
     
     return rank
 
