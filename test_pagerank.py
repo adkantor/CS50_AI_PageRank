@@ -47,7 +47,7 @@ class TransitionModelTestCase(unittest.TestCase):
 
         # result is dictionary
         self.assertIsInstance(result, dict)
-        # result returns even distribution to all pages
+        # result returns the calculated values
         expected = {
             '1.html': (0.15 * 1/4), 
             '2.html': (0.85 * 1) + (0.15 * 1/4), 
@@ -66,7 +66,7 @@ class TransitionModelTestCase(unittest.TestCase):
 
         # result is dictionary
         self.assertIsInstance(result, dict)
-        # result returns even distribution to all pages
+        # result returns the calculated values
         expected = {
             '1.html': (0.85 * 1/2) + (0.15 * 1/4), 
             '2.html': (0.15 * 1/4), 
